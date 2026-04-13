@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700;900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #02060a;
+  --bg2: #050c12;
+  --surface: #080f16;
+  --surface2: #0b1520;
+  --border: #111e28;
+  --border-bright: #162839;
+  --cyan: #00c8e0;
+  --cyan-dim: rgba(0,200,224,0.10);
+  --cyan-glow: rgba(0,200,224,0.06);
+  --green: #00e07a;
+  --green-dim: rgba(0,224,122,0.10);
+  --magenta: #e0006e;
+  --text: #7a9aaa;
+  --text-muted: #3e5a68;
+  --text-bright: #d8eaf0;
+  --font-mono: 'Space Mono', monospace;
+  --font-sans: 'Outfit', sans-serif;
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 2px; }
+
+.cursor-dot {
+  position: fixed;
+  width: 5px; height: 5px;
+  background: var(--cyan);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 8px var(--cyan);
+}
+.cursor-ring {
+  position: fixed;
+  width: 28px; height: 28px;
+  border: 1px solid rgba(0,200,224,0.3);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease, width 0.25s, height 0.25s;
+}
+
+::selection { background: var(--cyan); color: var(--bg); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 24px rgba(0,200,224,0.10); }
+  50%       { box-shadow: 0 0 48px rgba(0,200,224,0.22), 0 0 80px rgba(0,200,224,0.08); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+@keyframes grid-move {
+  0%   { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}

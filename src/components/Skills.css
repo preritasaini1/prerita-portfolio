@@ -1,0 +1,110 @@
+.skills { background: var(--bg2); }
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.skill-group {
+  padding: 1.2rem;
+}
+
+.skill-group-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.skill-group-icon { font-size: 1.2rem; }
+
+.skill-group-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--cyan);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skill-tag {
+  font-size: 0.78rem;
+  color: var(--text);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+  transition: all 0.2s;
+}
+
+.skill-tag:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  background: var(--cyan-glow);
+}
+
+.soft-skills-section {
+  margin-bottom: 2.5rem;
+}
+
+.soft-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.soft-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.soft-tag {
+  font-size: 0.85rem;
+  color: var(--green);
+  background: var(--green-dim);
+  border: 1px solid rgba(0,255,136,0.2);
+  border-radius: 20px;
+  padding: 0.3rem 1rem;
+}
+
+.leetcode-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: linear-gradient(135deg, rgba(255,189,0,0.06), rgba(255,189,0,0.02));
+  border: 1px solid rgba(255,189,0,0.2);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  flex-wrap: wrap;
+}
+
+.lc-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lc-icon { font-size: 2rem; }
+
+.lc-left strong {
+  display: block;
+  color: #ffd700;
+  margin-bottom: 0.3rem;
+}
+
+.lc-left p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}

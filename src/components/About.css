@@ -1,0 +1,147 @@
+.about { background: var(--bg); }
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* LEFT */
+.about-text {
+  font-size: 0.97rem;
+  line-height: 1.85;
+  color: var(--text);
+  margin-bottom: 1.2rem;
+}
+.about-text strong {
+  color: var(--text-bright);
+  font-weight: 600;
+}
+
+.about-links {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.about-link {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--cyan);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid rgba(0,200,224,0.25);
+  padding-bottom: 2px;
+  transition: border-color 0.2s, opacity 0.2s;
+}
+.about-link:hover { border-color: var(--cyan); opacity: 0.8; }
+
+/* RIGHT */
+.edu-card {
+  margin-bottom: 1rem;
+}
+.edu-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.edu-icon-wrap {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.edu-info {
+  flex: 1;
+}
+.edu-info h3 {
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin-bottom: 0.2rem;
+}
+.edu-info p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+.edu-year {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.edu-meta {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+}
+
+/* Award card */
+.award-card {
+  margin-bottom: 1rem;
+  border-color: rgba(0,200,224,0.15);
+  background: linear-gradient(135deg, var(--surface), rgba(0,200,224,0.03));
+}
+.award-left {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.award-trophy {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+.award-title {
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: var(--cyan);
+  margin-bottom: 0.25rem;
+}
+.award-sub {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+.award-detail {
+  font-size: 0.84rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+.award-detail strong { color: var(--text-bright); }
+
+/* Facts row */
+.facts-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+}
+.fact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.fact-num {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--cyan);
+  line-height: 1;
+}
+.fact-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+}
+.fact-div {
+  width: 1px;
+  height: 36px;
+  background: var(--border-bright);
+}
+
+@media (max-width: 900px) {
+  .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+}
