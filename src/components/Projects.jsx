@@ -14,8 +14,9 @@ const FEATURED_PROJECTS = [
       'Optimized backend schemas using GraphQL, Node.js, and MongoDB for fast data retrieval.',
     ],
     stack: ['Next.js', 'Node.js', 'GraphQL', 'MongoDB', 'OpenAI API', 'JWT'],
-    github: 'https://github.com/preritasaini1',
+    github: 'https://github.com/preritasaini1/MallMind',
     demo: '', // no demo url on resume
+    image: '/Photos/Dashboard.png',
     color: '#00e5ff',
     terminalTitle: 'mallmind-nav.js',
     terminalLines: (
@@ -50,6 +51,7 @@ const FEATURED_PROJECTS = [
     stack: ['Python', 'Streamlit', 'Gemini API', 'arXiv API', 'RAG'],
     github: 'https://github.com/preritasaini1/SciSPY',
     demo: 'https://scispy-agent.onrender.com/',
+    image: '/images/Search.png',
     color: '#00e5ff',
     terminalTitle: 'scispy.py',
     terminalLines: (
@@ -81,7 +83,8 @@ const PROJECTS = [
     date: 'Oct 2025',
     desc: 'Developed a manufacturing defect detection system using TensorFlow autoencoder models with confidence scoring, defect visualization overlays, and QR-based product traceability. Supported by a Flask dashboard for live webcam inspections.',
     stack: ['TensorFlow', 'Keras', 'Flask', 'OpenCV', 'Python'],
-    github: 'https://github.com/preritasaini1',
+    github: 'https://github.com/preritasaini1/AI_Quality_Assurance',
+    image: '/screenshots/Pass.png',
     icon: '🔍',
   },
   {
@@ -91,7 +94,8 @@ const PROJECTS = [
     date: 'Jul 2024',
     desc: 'Developed a full-stack ride-sharing platform with secure user authentication, real-time booking workflows, and relational data management using MySQL. Optimized database queries for matching passengers and drivers.',
     stack: ['Java', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
-    github: 'https://github.com/preritasaini1',
+    github: 'https://github.com/preritasaini1/Carpooling-System',
+    image: '/images/carpooling.png',
     icon: '🚗',
   },
 ]
@@ -170,15 +174,27 @@ export default function Projects() {
 
                 <div className="feat-right">
                   <div className="feat-visual">
-                    <div className="feat-terminal">
-                      <div className="terminal-bar">
-                        <span className="t-dot red" /><span className="t-dot yellow" /><span className="t-dot green" />
-                        <span className="t-title">{p.terminalTitle}</span>
+                    {p.image ? (
+                      <div className="feat-browser">
+                        <div className="browser-bar">
+                          <span className="t-dot red" /><span className="t-dot yellow" /><span className="t-dot green" />
+                          <span className="browser-url">{p.title.toLowerCase()}.ai/dashboard</span>
+                        </div>
+                        <div className="browser-content">
+                          <img src={p.image} alt={`${p.title} Dashboard`} className="browser-img" />
+                        </div>
                       </div>
-                      <div className="feat-code">
-                        {p.terminalLines}
+                    ) : (
+                      <div className="feat-terminal">
+                        <div className="terminal-bar">
+                          <span className="t-dot red" /><span className="t-dot yellow" /><span className="t-dot green" />
+                          <span className="t-title">{p.terminalTitle}</span>
+                        </div>
+                        <div className="feat-code">
+                          {p.terminalLines}
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -192,30 +208,37 @@ export default function Projects() {
           className={`projects-grid fade-in ${gridVisible ? 'visible' : ''}`}
         >
           {PROJECTS.map((p, i) => (
-            <div key={p.id} className="proj-card card" style={{ transitionDelay: `${i * 0.1}s` }}>
-              <div className="proj-top">
-                <span className="proj-icon">{p.icon}</span>
-                <div className="proj-links">
-                  <a
-                    href={p.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="proj-link"
-                    title="GitHub"
-                  >
-                    ↗
-                  </a>
+            <div key={p.id} className="proj-card card" style={{ transitionDelay: `${i * 0.1}s`, padding: p.image ? '0' : '' }}>
+              {p.image && (
+                <div className="proj-card-img-wrap">
+                  <img src={p.image} alt={p.title} className="proj-card-img" />
                 </div>
-              </div>
+              )}
+              <div className="proj-card-body" style={{ padding: p.image ? '1.6rem 1.8rem' : '0' }}>
+                <div className="proj-top">
+                  <span className="proj-icon">{p.icon}</span>
+                  <div className="proj-links">
+                    <a
+                      href={p.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="proj-link"
+                      title="GitHub"
+                    >
+                      ↗
+                    </a>
+                  </div>
+                </div>
 
-              <span className="tag proj-date">{p.date}</span>
-              <h3 className="proj-title">{p.title}</h3>
-              <p className="proj-subtitle">{p.subtitle}</p>
-              <p className="proj-desc">{p.desc}</p>
-              <div className="proj-stack">
-                {p.stack.map(s => (
-                  <span key={s} className="proj-tech">{s}</span>
-                ))}
+                <span className="tag proj-date">{p.date}</span>
+                <h3 className="proj-title">{p.title}</h3>
+                <p className="proj-subtitle">{p.subtitle}</p>
+                <p className="proj-desc">{p.desc}</p>
+                <div className="proj-stack">
+                  {p.stack.map(s => (
+                    <span key={s} className="proj-tech">{s}</span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
