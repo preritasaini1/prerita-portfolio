@@ -5,27 +5,32 @@ const SKILL_GROUPS = [
   {
     label: 'Languages',
     icon: '⌨️',
-    skills: ['Python', 'Java', 'SQL', 'JavaScript', 'HTML', 'CSS'],
+    skills: ['Python', 'JavaScript', 'Java', 'SQL', 'HTML', 'CSS'],
   },
   {
-    label: 'AI / ML',
+    label: 'AI / ML Libraries',
     icon: '🧠',
-    skills: ['TensorFlow', 'Keras', 'Scikit-learn', 'OpenCV', 'LangChain', 'NLP'],
+    skills: ['TensorFlow', 'Keras', 'Scikit-learn', 'OpenCV', 'NumPy', 'Pandas', 'LangChain'],
   },
   {
     label: 'Web & Backend',
     icon: '🌐',
-    skills: ['React.js', 'FastAPI', 'Node.js', 'Streamlit', 'Flask', 'Electron.js'],
+    skills: ['React.js', 'Next.js', 'Node.js', 'FastAPI', 'Flask', 'Streamlit', 'GraphQL'],
   },
   {
-    label: 'Data',
+    label: 'Databases',
     icon: '📊',
-    skills: ['NumPy', 'Pandas', 'MySQL', 'PostgreSQL', 'Firebase'],
+    skills: ['MySQL', 'PostgreSQL', 'MongoDB', 'Firebase'],
   },
   {
-    label: 'DevOps & Tools',
+    label: 'Tools & Platforms',
     icon: '🔧',
-    skills: ['Git', 'Docker', 'Kubernetes', 'Azure', 'ArXiv API'],
+    skills: ['Git', 'Docker', 'Kubernetes', 'Linux', 'Postman', 'Vercel', 'Render'],
+  },
+  {
+    label: 'Core CS & Concepts',
+    icon: '💡',
+    skills: ['RAG', 'Vector Search', 'Multi-Agent Systems', 'REST APIs', 'Data Structures & Algorithms', 'DBMS', 'Operating Systems', 'OOPs', 'Computer Networks'],
   },
 ]
 
@@ -77,7 +82,7 @@ export default function Skills() {
             <div className="lc-left">
               <span className="lc-icon">⚡</span>
               <div>
-                <strong>450+ LeetCode Problems Solved</strong>
+                <strong>650+ LeetCode Problems Solved</strong>
                 <p>Consistently practicing DSA — arrays, DP, graphs, trees & more</p>
               </div>
             </div>

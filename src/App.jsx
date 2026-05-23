@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import Cursor from './components/Cursor.jsx'
+import ParticleNetwork from './components/ParticleNetwork.jsx'
 import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
@@ -17,8 +18,8 @@ export default function App() {
       <Cursor />
       {/* Scanline overlay */}
       <div className="scanline-overlay" />
-      {/* Grid bg */}
-      <div className="grid-bg" />
+      {/* Particle Network Animation background */}
+      <ParticleNetwork />
       <Navbar />
       <main>
         <Hero />

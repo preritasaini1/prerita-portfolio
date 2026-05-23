@@ -1,25 +1,77 @@
 import useInView from '../hooks/useInView'
 import './Projects.css'
 
-const FEATURED = {
-  id: 'scispy',
-  title: 'SciSPY',
-  subtitle: 'AI Research Paper Retrieval Agent',
-  date: 'Feb 2025',
-  desc: `An AI-powered research agent that retrieves, analyzes, and summarizes scientific papers in seconds. 
-  Built using Python, SciPy and the ArXiv API, it implements a heuristic framework for intelligent query-based 
-  insight extraction from PDFs — automating what used to take researchers hours into a single command.`,
-  highlights: [
-    'Intelligent query-based insight extraction from academic PDFs',
-    'Heuristic framework for automated research summarization',
-    'ArXiv API integration for real-time paper discovery',
-    'Concise, actionable insights generation pipeline',
-  ],
-  stack: ['Python', 'SciPy', 'ArXiv API', 'NLP', 'PDF Parsing'],
-  github: 'https://github.com/preritasaini1/SciSPY',
-  demo: 'https://scispy-agent.onrender.com/',   // ← paste your live demo URL here e.g. 'https://scispy.streamlit.app'
-  color: '#00e5ff',
-}
+const FEATURED_PROJECTS = [
+  {
+    id: 'mallmind',
+    title: 'MallMind',
+    subtitle: 'Agentic Shopping Concierge',
+    date: 'Jan 2025',
+    desc: 'A multi-agent AI shopping concierge featuring JWT authentication and a GraphQL/Apollo backend. Deployed live on Vercel.',
+    highlights: [
+      'Implemented multi-agent workflows for product recommendation, mall navigation, and real-time deal comparison.',
+      'Integrated OpenAI-powered virtual try-on features to enhance user shopping experience.',
+      'Optimized backend schemas using GraphQL, Node.js, and MongoDB for fast data retrieval.',
+    ],
+    stack: ['Next.js', 'Node.js', 'GraphQL', 'MongoDB', 'OpenAI API', 'JWT'],
+    github: 'https://github.com/preritasaini1',
+    demo: '', // no demo url on resume
+    color: '#00e5ff',
+    terminalTitle: 'mallmind-nav.js',
+    terminalLines: (
+      <>
+        <p><span className="k">const</span> NAVIGATE_MALL = gql`</p>
+        <p className="indent">query GetNavigation($from: String!) &#123;</p>
+        <p className="indent-2">navigation(start: $from) &#123;</p>
+        <p className="indent-3">path, estTime</p>
+        <p className="indent-2">&#125;</p>
+        <p className="indent">&#125;</p>
+        <p>`;</p>
+        <br />
+        <p><span className="k">const</span> res = <span className="k">await</span> client.query(&#123; query: NAVIGATE_MALL &#125;);</p>
+        <br />
+        <p className="comment">// ✓ Multi-agent workflows active</p>
+        <p className="comment">// ✓ Virtual try-on ready (OpenAI)</p>
+        <p className="comment">// ✓ GraphQL query successful</p>
+      </>
+    )
+  },
+  {
+    id: 'scispy',
+    title: 'SciSPY',
+    subtitle: 'AI Research Intelligence Assistant',
+    date: 'Feb 2025',
+    desc: 'A full-stack research assistant that integrates the arXiv Open API for real-time paper retrieval with Gemini API for contextual AI-powered Q&A on academic papers.',
+    highlights: [
+      'Architected a stateless, API-driven backend with dynamic search filters and clean Streamlit UI.',
+      'Deployed on Render with a live demo supporting contextual Q&A on academic PDFs.',
+      'Integrated Gemini API to summarize papers and answer queries accurately.',
+    ],
+    stack: ['Python', 'Streamlit', 'Gemini API', 'arXiv API', 'RAG'],
+    github: 'https://github.com/preritasaini1/SciSPY',
+    demo: 'https://scispy-agent.onrender.com/',
+    color: '#00e5ff',
+    terminalTitle: 'scispy.py',
+    terminalLines: (
+      <>
+        <p><span className="k">from</span> scispy <span className="k">import</span> ResearchAgent</p>
+        <br />
+        <p><span className="k">agent</span> = ResearchAgent(</p>
+        <p className="indent"><span className="s">source</span>=<span className="v">"arxiv"</span>,</p>
+        <p className="indent"><span className="s">summarize</span>=<span className="v">True</span></p>
+        <p>)</p>
+        <br />
+        <p>results = agent.query(</p>
+        <p className="indent"><span className="v">"transformer attention mechanisms"</span></p>
+        <p>)</p>
+        <br />
+        <p className="comment"># ✓ Found 12 papers</p>
+        <p className="comment"># ✓ Extracted key insights</p>
+        <p className="comment"># ✓ Summary generated</p>
+      </>
+    )
+  }
+]
 
 const PROJECTS = [
   {
@@ -27,20 +79,20 @@ const PROJECTS = [
     title: 'AI Quality Assurance',
     subtitle: 'Real-Time Defect Detection System',
     date: 'Oct 2025',
-    desc: 'TensorFlow-based autoencoder model detecting defects in manufacturing items in real-time via webcam or image uploads, with live confidence scoring and QR code traceability.',
-    stack: ['TensorFlow', 'Flask', 'OpenCV', 'Python', 'Autoencoder'],
+    desc: 'Developed a manufacturing defect detection system using TensorFlow autoencoder models with confidence scoring, defect visualization overlays, and QR-based product traceability. Supported by a Flask dashboard for live webcam inspections.',
+    stack: ['TensorFlow', 'Keras', 'Flask', 'OpenCV', 'Python'],
     github: 'https://github.com/preritasaini1',
     icon: '🔍',
   },
   {
-    id: 'notes',
-    title: 'Secure Notes App',
-    subtitle: 'Cross-Platform Desktop App',
-    date: 'May–Jun 2025',
-    desc: 'Secure cross-platform note-taking app with password protection, unsaved change alerts, and multi-page navigation built using Electron.js.',
-    stack: ['Electron.js', 'HTML', 'CSS', 'JavaScript'],
+    id: 'carpool',
+    title: 'Smart Carpooling System',
+    subtitle: 'Full-Stack Ride-Sharing Platform',
+    date: 'Jul 2024',
+    desc: 'Developed a full-stack ride-sharing platform with secure user authentication, real-time booking workflows, and relational data management using MySQL. Optimized database queries for matching passengers and drivers.',
+    stack: ['Java', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
     github: 'https://github.com/preritasaini1',
-    icon: '🔐',
+    icon: '🚗',
   },
 ]
 
@@ -55,88 +107,83 @@ export default function Projects() {
         <h2 className="section-title">Things I've <span>built</span></h2>
         <div className="section-line" />
 
-        {/* Featured Project */}
+        {/* Featured Projects */}
         <div
           ref={featRef}
-          className={`featured-project fade-in ${featVisible ? 'visible' : ''}`}
+          className={`featured-projects-container fade-in ${featVisible ? 'visible' : ''}`}
         >
-          <div className="feat-badge">
-            <span>★ Featured Project</span>
-          </div>
-
-          <div className="feat-inner">
-            <div className="feat-left">
-              <div className="feat-meta">
-                <span className="tag">{FEATURED.date}</span>
-              </div>
-              <h3 className="feat-title">{FEATURED.title}</h3>
-              <p className="feat-subtitle">{FEATURED.subtitle}</p>
-              <p className="feat-desc">{FEATURED.desc}</p>
-
-              <ul className="feat-highlights">
-                {FEATURED.highlights.map((h, i) => (
-                  <li key={i}>
-                    <span className="feat-bullet">▹</span>
-                    {h}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="feat-stack">
-                {FEATURED.stack.map(s => (
-                  <span key={s} className="tag">{s}</span>
-                ))}
+          {FEATURED_PROJECTS.map((p, idx) => (
+            <div
+              key={p.id}
+              className={`featured-project ${idx % 2 !== 0 ? 'alt' : ''}`}
+              style={{ marginBottom: idx === FEATURED_PROJECTS.length - 1 ? '4rem' : '3rem' }}
+            >
+              <div className="feat-badge">
+                <span>★ Featured Project</span>
               </div>
 
-              <div className="feat-actions">
-                <a
-                  href={FEATURED.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-primary"
-                >
-                  View on GitHub ↗
-                </a>
-                {FEATURED.demo && (
-                  <a
-                    href={FEATURED.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-outline"
-                  >
-                    Live Demo ↗
-                  </a>
-                )}
-              </div>
-            </div>
-
-            <div className="feat-right">
-              <div className="feat-visual">
-                <div className="feat-terminal">
-                  <div className="terminal-bar">
-                    <span className="t-dot red" /><span className="t-dot yellow" /><span className="t-dot green" />
-                    <span className="t-title">scispy.py</span>
+              <div className="feat-inner">
+                <div className="feat-left">
+                  <div className="feat-meta">
+                    <span className="tag">{p.date}</span>
                   </div>
-                  <div className="feat-code">
-                    <p><span className="k">from</span> scispy <span className="k">import</span> ResearchAgent</p>
-                    <br />
-                    <p><span className="k">agent</span> = ResearchAgent(</p>
-                    <p className="indent"><span className="s">source</span>=<span className="v">"arxiv"</span>,</p>
-                    <p className="indent"><span className="s">summarize</span>=<span className="v">True</span></p>
-                    <p>)</p>
-                    <br />
-                    <p>results = agent.query(</p>
-                    <p className="indent"><span className="v">"transformer attention mechanisms"</span></p>
-                    <p>)</p>
-                    <br />
-                    <p className="comment"># ✓ Found 12 papers</p>
-                    <p className="comment"># ✓ Extracted key insights</p>
-                    <p className="comment"># ✓ Summary generated</p>
+                  <h3 className="feat-title">{p.title}</h3>
+                  <p className="feat-subtitle">{p.subtitle}</p>
+                  <p className="feat-desc">{p.desc}</p>
+
+                  <ul className="feat-highlights">
+                    {p.highlights.map((h, i) => (
+                      <li key={i}>
+                        <span className="feat-bullet">▹</span>
+                        {h}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="feat-stack">
+                    {p.stack.map(s => (
+                      <span key={s} className="tag">{s}</span>
+                    ))}
+                  </div>
+
+                  <div className="feat-actions">
+                    <a
+                      href={p.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary"
+                    >
+                      View on GitHub ↗
+                    </a>
+                    {p.demo && (
+                      <a
+                        href={p.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-outline"
+                      >
+                        Live Demo ↗
+                      </a>
+                    )}
+                  </div>
+                </div>
+
+                <div className="feat-right">
+                  <div className="feat-visual">
+                    <div className="feat-terminal">
+                      <div className="terminal-bar">
+                        <span className="t-dot red" /><span className="t-dot yellow" /><span className="t-dot green" />
+                        <span className="t-title">{p.terminalTitle}</span>
+                      </div>
+                      <div className="feat-code">
+                        {p.terminalLines}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
 
         {/* Other Projects Grid */}
@@ -160,6 +207,7 @@ export default function Projects() {
                   </a>
                 </div>
               </div>
+
               <span className="tag proj-date">{p.date}</span>
               <h3 className="proj-title">{p.title}</h3>
               <p className="proj-subtitle">{p.subtitle}</p>

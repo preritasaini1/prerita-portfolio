@@ -2,11 +2,11 @@ import { useEffect, useRef, useState } from 'react'
 import './Hero.css'
 
 const roles = [
-  'AI/ML Developer',
+  'AI/ML-focused Developer',
+  'Agentic AI Architect',
   'IIT Roorkee Hackathon Winner',
-  'Computer Vision Engineer',
-  'NLP Enthusiast',
-  '450+ LeetCode Problems',
+  'Software Engineer Intern',
+  '650+ LeetCode Solved',
 ]
 
 export default function Hero() {
@@ -89,14 +89,12 @@ export default function Hero() {
             <span className="name-accent">Saini</span>
           </h1>
           <p className="hero-desc">
-            AI/ML Developer building scalable machine learning solutions.
-            Winner of IIT Roorkee's E-Summit Hackathon among 300+ teams.
-            Passionate about computer vision, NLP & making AI impactful.
+            AI/ML-focused software developer building RAG systems, agentic AI workflows, and production-ready, full-stack applications. Winner of IIT Roorkee's E-Summit Hackathon.
           </p>
 
           <div className="hero-stats">
             <div className="stat">
-              <span className="stat-num">450+</span>
+              <span className="stat-num">650+</span>
               <span className="stat-label">LeetCode</span>
             </div>
             <div className="stat-div" />
@@ -107,7 +105,7 @@ export default function Hero() {
             <div className="stat-div" />
             <div className="stat">
               <span className="stat-num">8.4</span>
-              <span className="stat-label">CGPA</span>
+              <span className="stat-label">CPI</span>
             </div>
           </div>
 

@@ -3,7 +3,7 @@ import './Certifications.css'
 
 const CERTS = [
   {
-    title: 'Microsoft Certified: Azure AI Fundamentals',
+    title: 'Microsoft Azure AI Fundamentals',
     code: 'AI-900',
     issuer: 'Microsoft',
     date: 'June 2025',
@@ -13,7 +13,7 @@ const CERTS = [
     link: '',
   },
   {
-    title: 'Introduction to Artificial Intelligence',
+    title: 'IBM Artificial Intelligence',
     code: 'IBM AI',
     issuer: 'IBM',
     date: 'October 2024',
@@ -23,18 +23,8 @@ const CERTS = [
     link: '',
   },
   {
-    title: 'HTML, CSS and JavaScript for Web Developers',
-    code: 'Web Dev',
-    issuer: 'Johns Hopkins University',
-    date: 'January 2024',
-    icon: '🎓',
-    color: '#00a6d6',
-    badge: 'Johns Hopkins',
-    link: '',
-  },
-  {
-    title: 'Python for Data Science, AI and Development',
-    code: 'Python DS',
+    title: 'IBM Python for Data Science & AI',
+    code: 'Python AI',
     issuer: 'IBM',
     date: 'December 2023',
     icon: '🐍',
@@ -47,17 +37,22 @@ const CERTS = [
 const HR_CERTS = [
   {
     title: 'Problem Solving',
-    level: 'Basic',
-    link: 'https://www.hackerrank.com/profile/preritasaini1',
-  },
-  {
-    title: 'Problem Solving',
-    level: 'Intermediate',
+    level: 'Verified Badge',
     link: 'https://www.hackerrank.com/profile/preritasaini1',
   },
   {
     title: 'Java',
-    level: 'Basic',
+    level: 'Verified Badge',
+    link: 'https://www.hackerrank.com/profile/preritasaini1',
+  },
+  {
+    title: 'Python',
+    level: 'Verified Badge',
+    link: 'https://www.hackerrank.com/profile/preritasaini1',
+  },
+  {
+    title: 'SQL',
+    level: 'Verified Badge',
     link: 'https://www.hackerrank.com/profile/preritasaini1',
   },
 ]

@@ -1,18 +1,18 @@
-.about { background: var(--bg); }
+.about { background: transparent; }
 
 .about-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 5rem;
   align-items: start;
 }
 
-/* LEFT */
+/* LEFT SIDE - BIO */
 .about-text {
-  font-size: 0.97rem;
+  font-size: 1.02rem;
   line-height: 1.85;
   color: var(--text);
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
 }
 .about-text strong {
   color: var(--text-bright);
@@ -21,47 +21,58 @@
 
 .about-links {
   display: flex;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 2.2rem;
+  margin-top: 2.2rem;
 }
 .about-link {
   font-family: var(--font-mono);
   font-size: 0.78rem;
   color: var(--cyan);
   text-decoration: none;
-  letter-spacing: 0.04em;
-  border-bottom: 1px solid rgba(0,200,224,0.25);
-  padding-bottom: 2px;
-  transition: border-color 0.2s, opacity 0.2s;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(0, 242, 254, 0.2);
+  padding-bottom: 3px;
+  transition: all 0.25s ease;
+  text-transform: uppercase;
 }
-.about-link:hover { border-color: var(--cyan); opacity: 0.8; }
+.about-link:hover {
+  border-color: var(--cyan);
+  text-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
+  transform: translateY(-1px);
+}
 
-/* RIGHT */
+/* RIGHT SIDE - CARDS */
 .edu-card {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  border-left: 3px solid var(--cyan) !important;
+  background: linear-gradient(135deg, rgba(13, 8, 30, 0.45), rgba(0, 242, 254, 0.02)) !important;
 }
+
 .edu-header {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 .edu-icon-wrap {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   flex-shrink: 0;
   margin-top: 2px;
+  filter: drop-shadow(0 0 6px var(--cyan));
 }
 .edu-info {
   flex: 1;
 }
 .edu-info h3 {
-  font-size: 0.97rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 700;
   color: var(--text-bright);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
 }
 .edu-info p {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
+  line-height: 1.4;
 }
 .edu-year {
   font-family: var(--font-mono);
@@ -71,41 +82,46 @@
 }
 .edu-meta {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 0.9rem;
+  margin-top: 1rem;
 }
 
 /* Award card */
 .award-card {
-  margin-bottom: 1rem;
-  border-color: rgba(0,200,224,0.15);
-  background: linear-gradient(135deg, var(--surface), rgba(0,200,224,0.03));
+  margin-bottom: 1.2rem;
+  border-left: 3px solid #ffd700 !important;
+  background: linear-gradient(135deg, rgba(13, 8, 30, 0.45), rgba(255, 215, 0, 0.02)) !important;
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.02);
 }
 .award-left {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
   align-items: flex-start;
 }
 .award-trophy {
   font-size: 1.6rem;
   flex-shrink: 0;
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.6));
 }
 .award-title {
-  font-size: 0.97rem;
-  font-weight: 600;
-  color: var(--cyan);
-  margin-bottom: 0.25rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffd700;
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.01em;
 }
 .award-sub {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   color: var(--text-muted);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.03em;
 }
 .award-detail {
-  font-size: 0.84rem;
-  color: var(--text);
-  line-height: 1.6;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.65;
 }
 .award-detail strong { color: var(--text-bright); }
 
@@ -114,34 +130,40 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  background: var(--surface);
+  background: rgba(13, 8, 30, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  padding: 1.3rem 1.6rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
 }
 .fact-item {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.25rem;
 }
 .fact-num {
   font-family: var(--font-mono);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: var(--cyan);
+  background: linear-gradient(135deg, var(--cyan) 0%, var(--purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   line-height: 1;
 }
 .fact-label {
   font-size: 0.72rem;
   color: var(--text-muted);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 .fact-div {
   width: 1px;
-  height: 36px;
-  background: var(--border-bright);
+  height: 38px;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 @media (max-width: 900px) {
-  .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .about-inner { grid-template-columns: 1fr; gap: 3.5rem; }
 }
