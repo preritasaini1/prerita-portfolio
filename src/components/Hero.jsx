@@ -112,6 +112,14 @@ export default function Hero() {
           <div className="hero-actions">
             <a href="#projects" className="btn btn-primary">View Projects →</a>
             <a
+              href="https://drive.google.com/file/d/1rs4BNngJmaqPnfScUggG6q-JV25rVRpk/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline"
+            >
+              Resume ↗
+            </a>
+            <a
               href="https://github.com/preritasaini1"
               target="_blank"
               rel="noopener noreferrer"

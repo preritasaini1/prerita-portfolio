@@ -47,6 +47,17 @@ export default function Navbar() {
         ))}
         <li>
           <a
+            href="https://drive.google.com/file/d/1rs4BNngJmaqPnfScUggG6q-JV25rVRpk/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-cta"
+            style={{ background: 'linear-gradient(135deg, var(--cyan) 0%, var(--purple) 100%)', color: '#030114', border: 'none' }}
+          >
+            Resume ↗
+          </a>
+        </li>
+        <li>
+          <a
             href="https://github.com/preritasaini1"
             target="_blank"
             rel="noopener noreferrer"
