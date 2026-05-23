@@ -15,7 +15,7 @@ const FEATURED_PROJECTS = [
     ],
     stack: ['Next.js', 'Node.js', 'GraphQL', 'MongoDB', 'OpenAI API', 'JWT'],
     github: 'https://github.com/preritasaini1/MallMind',
-    demo: '', // no demo url on resume
+    demo: 'https://mall-mind.vercel.app/',
     image: '/Photos/Dashboard.png',
     color: '#00e5ff',
     terminalTitle: 'mallmind-nav.js',
@@ -46,7 +46,7 @@ const FEATURED_PROJECTS = [
     highlights: [
       'Architected a stateless, API-driven backend with dynamic search filters and clean Streamlit UI.',
       'Deployed on Render with a live demo supporting contextual Q&A on academic PDFs.',
-      'Integrated Gemini API to summarize papers and answer queries accurately.',
+      'Integrated Gemini API for contextual paper summarization and natural-language Q&A.',
     ],
     stack: ['Python', 'Streamlit', 'Gemini API', 'arXiv API', 'RAG'],
     github: 'https://github.com/preritasaini1/SciSPY',
