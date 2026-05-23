@@ -88,6 +88,25 @@
   box-shadow: 0 0 18px rgba(0,229,255,0.15);
 }
 
+.nav-cta-resume {
+  font-family: var(--font-mono) !important;
+  font-size: 0.78rem !important;
+  color: var(--text-bright) !important;
+  border: 1px solid rgba(0, 242, 254, 0.4) !important;
+  background: rgba(0, 242, 254, 0.05) !important;
+  border-radius: 5px;
+  padding: 0.45rem 1.1rem !important;
+  transition: all 0.25s !important;
+  letter-spacing: 0.04em !important;
+}
+.nav-cta-resume::after { display: none !important; }
+.nav-cta-resume:hover {
+  background: rgba(0, 242, 254, 0.15) !important;
+  border-color: var(--cyan) !important;
+  color: var(--cyan) !important;
+  box-shadow: 0 0 18px rgba(0, 242, 254, 0.25);
+}
+
 /* Hamburger */
 .hamburger {
   display: none;
